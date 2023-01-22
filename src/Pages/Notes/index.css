@@ -1,0 +1,10 @@
+.card-panel {
+    width: 40vh;
+    height: 45vh;
+    text-align: center;
+    word-wrap: normal;
+}
+
+.btn {
+    background-color: #6e5c6f;
+}
