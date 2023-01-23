@@ -54,7 +54,7 @@ function Notes() {
             <strong>Notes</strong>
           </h4>
         </header>
-        <div className="row">
+        <div className="nftscards container">
           {notes?.map((note) => (
             <div className="col-4" key={note?._id}>
               <div
@@ -139,9 +139,12 @@ function Notes() {
             </div>
           ))}
         </div>
+        <div className='buttoncontainer'>
+          
         <button className='create'>
           <a href="/make" className='btn'>Create Note</a>
         </button>
+        </div>
       </main>
     );
 }

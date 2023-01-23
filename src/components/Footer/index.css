@@ -17,3 +17,11 @@
 .tiktok{
     padding-right: 5vh;
 }
+@media (max-width: 500px) {
+    .rowfooter {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+     }
+ }

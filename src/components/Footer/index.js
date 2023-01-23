@@ -9,7 +9,7 @@ function Footer() {
         <footer className="footer-section">
             <hr className='hr'/>
             <div className="container">
-                <div className="row">
+                <div className="rowfooter row">
                     <div className="footer-section">
                         <h6><strong>Navigation</strong></h6>
                         <a href='/'>Home</a>

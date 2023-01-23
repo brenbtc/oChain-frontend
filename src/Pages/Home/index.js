@@ -18,11 +18,12 @@ function Home() {
                 <h4><strong>DISCOVER BLOCKCHAIN.</strong></h4>
                 <p>EVERYTHING YOU NEED TO NAVIGATE THE RAPIDLY EVOLVING FUTURE</p>
             </header>
-            <div className="row">
+            <div className="options container">
             {cards.map((card) => (
                 <div key={card.id} className="col">
                     <a href={card.link}>
-                    <div className="card small">
+                        
+                    <div className="card small ">
                         <div className="card-image">
                             <img src={card.img} />
                         </div>

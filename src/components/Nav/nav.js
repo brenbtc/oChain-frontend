@@ -54,10 +54,16 @@ function Nav(props) {
       <main>
         <nav>
           <div className='nav-wrapper'>
-            <h5 className='brand-logo'><Link to='/'className='btn-flat'>oChain</Link></h5>
+            <div className='brand-logo'
+            id='logo-container'>
+              <Link to='/'className='btn-flat'>oChain</Link>
+              </div>
+              <div className='registration'>
               <ul className='right'>
                   {navItems}
               </ul>
+              </div>
+      
           </div>
         </nav>
       </main>

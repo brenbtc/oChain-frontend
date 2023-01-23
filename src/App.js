@@ -18,13 +18,12 @@ import { CenterProvider } from '@center-inc/react'
 import Home from "./Pages/Home";
 import About from './Pages/About/about';
 import Crypto from './Pages/Crypto/dis-crypto'
-
-import Disnft from './Pages/NFT/Disnft';
-import ShowCrypto from './Pages/ShowCrypto/show-crypto'
+import Disnft from './Pages/NFT/Disnft'
 import Learn from './Pages/Learn';
 import Watchlist from './Pages/Watchlist/watchlist'
 import MakeNote from './Pages/MakeNote';
 import Notes from './Pages/Notes';
+import Page404 from './Pages/404Page/Page404';
 
 function App() {
 
@@ -39,68 +38,58 @@ function App() {
 
   return (
     <>
-    <header>
-      <Nav loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
-    </header>
+      <header>
+        <Nav loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+      </header>
       <main>
         <Routes>
-          <Route 
-          path='/' 
-          element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>}
+          <Route
+            path="/"
+            element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
           />
 
           <Route
-           path="/login" 
-           element={ <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser}/>} 
-           />
-
-          <Route 
-          path="/signup"
-          element={<Signup loggedIn={loggedIn} setLoggedIn={setLoggedIn} setUser={setUser}/>}
+            path="/login"
+            element={
+              <Login
+                loggedIn={loggedIn}
+                setLoggedIn={setLoggedIn}
+                setUser={setUser}
+              />
+            }
           />
 
-          <Route 
-          path='/about'
-          element={<About />}
+          <Route
+            path="/signup"
+            element={
+              <Signup
+                loggedIn={loggedIn}
+                setLoggedIn={setLoggedIn}
+                setUser={setUser}
+              />
+            }
           />
 
-          <Route 
-          path='/crypto'
-          element={<Crypto />}
+          <Route path="/about" element={<About />} />
+
+          <Route path="/crypto" element={<Crypto />} />
+
+          <Route path="/nft" element={<Disnft />} />
+
+          <Route
+            path="/watchlist"
+            element={<Watchlist loggedIn={loggedIn} />}
           />
 
-          <Route 
-          path="/nft" 
-          element={<Disnft />} 
-          />
+          <Route path="/make" element={<MakeNote />} />
 
+          <Route path="/learn" element={<Learn />} />
 
-          <Route 
-          path='/crypto/crypto'
-          element={<ShowCrypto />}
+          <Route
+            path="/notes"
+            element={<Notes loggedIn={loggedIn} user={user} />}
           />
-
-          <Route 
-          path='/watchlist'
-          element={<Watchlist loggedIn={loggedIn}/>}
-          />
-          
-          <Route 
-          path='/make'
-          element={<MakeNote />}
-          />
-          
-
-          <Route 
-          path='/learn'
-          element={<Learn />}
-          />
-
-
-          <Route 
-          path='/notes'
-          element={<Notes  loggedIn={loggedIn} user={user}/>}
-          />
+        <Route path="*" element={<Page404 />} />
         </Routes>
       </main>
       <footer>

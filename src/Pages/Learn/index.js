@@ -24,9 +24,9 @@ function Learn() {
             </header>
             <div className="cardslist">
             {cards.map((card) => (
-                <div key={card.id} className="col">
+                <div key={card.id} className="card customcard">
                     <a href={card.link} target='_blank'>
-                    <div className="card large">
+                    <div className="singlecard small">
                         <div className="card-image">
                             <img src={card.img} />
                         </div>

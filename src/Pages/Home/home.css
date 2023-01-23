@@ -12,3 +12,25 @@
     color: black;
     text-decoration: none;
 }
+.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.home-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.card{
+    margin: 10px;
+}
+@media (max-width: 500px) {
+    .options {
+        flex-direction: column;
+    }
+}
