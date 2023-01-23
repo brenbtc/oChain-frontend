@@ -9,7 +9,7 @@ const config = {
 // Sign Up \\
 export async function signUp(formData) {
   const { data } = await axios.post(
-    "http://localhost:5000/user/signup",
+    "https://brenochain.herokuapp.com/user/signup",
     formData,
   )
   return data;
@@ -18,7 +18,7 @@ export async function signUp(formData) {
 // Login \\
 export async function accountLogin(formData) {
   const { data } = await axios.post(
-    "http://localhost:5000/user/login",
+    "https://brenochain.herokuapp.com/user/login",
     formData,
     config
   )
@@ -28,13 +28,13 @@ export async function accountLogin(formData) {
 // Create Note \\
 export async function createNote(formData) {
   const { data } = await axios.post(
-    "http://localhost:5000/note/",formData, config)
+    "https://brenochain.herokuapp.com/note/",formData, config)
     return data
 }
 
 // Token Show \\
 export async function getToken() {
-  const { data } = await axios.get('http://localhost:5000/user/token', config)
+  const { data } = await axios.get('https://brenochain.herokuapp.com/user/token', config)
   return data
 }
 
@@ -42,7 +42,7 @@ export async function getToken() {
 
 // Show Note \\
 export async function showNote(){
-  const { data } = await axios.get("http://localhost:5000/note")
+  const { data } = await axios.get("https://brenochain.herokuapp.com/note")
   return data
 }
 
@@ -50,12 +50,12 @@ export async function showNote(){
 
 // Update/Edit Note \\
 export async function updateNote(note) {
-  const { data } = await axios.put(`http://localhost:5000/note/${note._id}`, note, config)
+  const { data } = await axios.put(`https://brenochain.herokuapp.com/note/${note._id}`, note, config)
   return data
 }
 
 // Delete Note \\
 export async function deleteNote(_id) 
 {
-  await axios.delete(`http://localhost:5000/note/${_id}`, config)
+  await axios.delete(`https://brenochain.herokuapp.com/note/${_id}`, config)
 }
